@@ -6,11 +6,11 @@ const app = express();
 
 app.use(cors({
     origin: process.env.CORS_ORIGIN,
-    credentials: true
+    credentials: true //send cookies with requests
 }))
 
 app.use(express.json({
-    limit: "16kb"
+    limit: "16kb" //sends json data with a limit of 16kb in post or put
 }));
 
 app.use(express.urlencoded({
